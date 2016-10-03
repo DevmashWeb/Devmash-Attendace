@@ -1,0 +1,33 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+.container
+  margin-top: 10vh
+  ul
+    color: white
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    list-style: none
+    .student
+      display: inline-block
+      background-color: #f4345f
+      padding: .4em
+      // margin: .2em
+      // width: 30%
+      text-transform: capitalize
+      cursor: pointer
+      transition: all .6s ease-in-out
+      opacity: 0
+      transform: rotateY(80deg)
+      &.is-visible
+        opacity: 1
+        transform: rotateX(0deg)
+      &:hover
+        transform: scale(1.1)
+        background-color: #272727
+
+  button
+    color: #f4345f
+
+#absentees-list, #winner-list
+  display: flex

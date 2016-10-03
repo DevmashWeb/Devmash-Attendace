@@ -1,0 +1,53 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+.container {
+  margin-top: 10vh;
+}
+
+.container ul {
+  color: white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  list-style: none;
+}
+
+.container ul .student {
+  display: inline-block;
+  background-color: #f4345f;
+  padding: .4em;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all .6s ease-in-out;
+  opacity: 0;
+  -webkit-transform: rotateY(80deg);
+          transform: rotateY(80deg);
+}
+
+.container ul .student.is-visible {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+.container ul .student:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #272727;
+}
+
+.container button {
+  color: #f4345f;
+}
+
+#absentees-list, #winner-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
