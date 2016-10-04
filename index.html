@@ -57,5 +57,11 @@
     <script src="js/jquery-3.0.0.min.js" charset="utf-8"></script>
     <script src="js/script.js" charset="utf-8"></script>
 </body>
-
+<script>
+function add_to_present() {
+  console.log("hey ");
+    $(this).css('background-color', 'blue').addClass('present');
+    attended.push($(this).text());
+}
+</script>
 </html>

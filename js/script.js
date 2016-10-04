@@ -76,6 +76,11 @@ students.diff = function(a) {
 
 $(document).ready(function() {
 
+  function add_to_present() {
+      $(this).css('background-color', 'black').addClass('present');
+      attended.push($(this).text());
+  }
+
     // Printing all the Students' Name in the DOM
     students.forEach(function(el, index) {
         $("#list").append('<li class="student">' + el + '</li>');
@@ -85,11 +90,8 @@ $(document).ready(function() {
     animateInStudents("list");
     // Animating them in
 
-    // Function Attendace thing
-    $(".student").on('click', function() {
-        $(this).css('background-color', 'black').addClass('present');
-        attended.push($(this).text());
-    });
+  // Function Attendace thing
+
 
     //  Show the absent list
     $('#absent').click(function(event) {
@@ -101,7 +103,7 @@ $(document).ready(function() {
 //
             absent.forEach(function(el, index) {
 
-                $('#absentees-list').append('<li class="student">' + el + '</li>');
+                $('#absentees-list').append('<li class="student" onclick="add_to_present()">' + el + '</li>');
                 console.log("student added to absent");
             });
         animateInStudents("absentees-list");
